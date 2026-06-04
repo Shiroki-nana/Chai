@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>創作中華香港手作り点心 チャイ｜東京早稲田</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}">	
+	<link rel="stylesheet" th:href="@{/css/modaal.css}">
+    <style>
+        * {margin:0;padding:0;box-sizing:border-box;}
+        body {
+            font-family:"ヒラギノ明朝 ProN","MS明朝",serif;
+            background:#fff;
+            color:#222;
+            line-height:2;
+        }
+        /* ヘッダー 黒＋赤＋金 */
+        header {
+            background:#000;
+            padding:42px 0;
+            text-align:center;
+            border-bottom:3px solid #b81010;
+        }
+        header h1 {
+            color:#d4af37;
+            font-size:44px;
+            letter-spacing:6px;
+        }
+        header .sub {
+            color:#fff;
+            font-size:15px;
+            letter-spacing:2px;
+        }
+        /* メイン：点心大背景 */
+        .main-visual {
+            height:520px;
+            background:linear-gradient(rgba(0,0,0,0.62),rgba(0,0,0,0.68)),url('https://images.unsplash.com/photo-1563245372-f21724e3856d');
+            background-size:cover;background-position:center;
+            display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;
+        }
+        .main-visual h2 {
+            font-size:38px;color:#fff;margin-bottom:18px;
+        }
+        .main-visual p {font-size:17px;max-width:820px;opacity:0.95;}
+        .wrap {max-width:1220px;margin:90px auto;padding:0 30px;}
+        /* タイトル：赤左罫＋金 */
+        .section-title {
+            font-size:29px;color:#b81010;
+            border-left:8px solid #d4af37;padding-left:16px;
+            margin-bottom:32px;
+        }
+        /* 各ブロック：料理画像半透明背景＋白下地 */
+        .box-concept{
+            padding:50px;
+            margin-bottom:60px;
+            background:linear-gradient(rgba(255,255,255,0.92),rgba(255,255,255,0.92)),url('https://images.unsplash.com/photo-1555126634-79d92e25fa1d');
+            background-size:cover;background-position:center;
+            border-left:4px solid #b81010;border-right:4px solid #d4af37;
+            box-shadow:0 2px 16px #ddd;
+        }
+        .box-info{
+            padding:50px;
+            margin-bottom:60px;
+            background:linear-gradient(rgba(255,255,255,0.92),rgba(255,255,255,0.92)),url('https://images.unsplash.com/photo-1563379926989-05f4575a41d1');
+            background-size:cover;background-position:center;
+            border-left:4px solid #b81010;border-right:4px solid #d4af37;
+            box-shadow:0 2px 16px #ddd;
+        }
+        .box-service{
+            padding:50px;
+            margin-bottom:60px;
+            background:linear-gradient(rgba(255,255,255,0.92),rgba(255,255,255,0.92)),url('https://images.unsplash.com/photo-1594015256978-366f985536ce');
+            background-size:cover;background-position:center;
+            border-left:4px solid #b81010;border-right:4px solid #d4af37;
+            box-shadow:0 2px 16px #ddd;
+        }
+        .box-menu{
+            padding:50px;
+            margin-bottom:60px;
+            background:linear-gradient(rgba(255,255,255,0.93),rgba(255,255,255,0.93)),url('https://images.unsplash.com/photo-1518492104633-130d0cc84637');
+            background-size:cover;background-position:center;
+            border-left:4px solid #b81010;border-right:4px solid #d4af37;
+            box-shadow:0 2px 16px #ddd;
+        }
+        .box-note{
+            padding:50px;
+            background:linear-gradient(rgba(255,255,255,0.92),rgba(255,255,255,0.92)),url('https://images.unsplash.com/photo-1598511756348-9d493c90d6e3');
+            background-size:cover;background-position:center;
+            border-left:4px solid #b81010;border-right:4px solid #d4af37;
+            box-shadow:0 2px 16px #ddd;
+        }
+        .box p {font-size:16.5px;margin-bottom:11px;color:#222;}
+        .box strong {color:#b81010;}
+        /* メニューカード */
+        .menu-flex {display:flex;flex-wrap:wrap;gap:22px;margin-top:24px;}
+        .menu-card {
+            flex:1;min-width:270px;background:#fff;padding:26px;border:1px solid #e2e2e2;text-align:center;
+        }
+        .menu-card h4 {color:#b81010;font-size:19px;margin-bottom:9px;}
+        /* フッター黒地＋金色上罫 */
+        footer {
+            background:#000;color:#fff;text-align:center;
+            padding:48px 0;border-top:3px solid #d4af37;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>創作中華香港手作り点心 チャイ</h1>
+    <p class="sub">HONG KONG DIM SUM｜TOKYO WASEDA</p>
+</header>
+
+<div class="main-visual">
+    <div>
+        <h2>香港シェフこだわり 手作り点心と創作中華</h2>
+        <p>毎朝仕入れる新鮮食材で一つひとつ手仕込み。<br>看板の自家製杏仁豆腐とともに、本場香港の味を早稲田でご堪能ください</p>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="box-concept box">
+        <h3 class="section-title">店舗コンセプト</h3>
+        <p>東京早稲田の閑静な立地に佇む「チャイ」は、香港出身熟練シェフが営む本格創作中華専門店です。</p>
+        <p>伝統香港料理の技法を守りつつ、日本人の味覚に合わせて素材・調味を調整。点心はすべて店内手作り、冷凍品は一切使用しておりません。</p>
+        <p>上海出身店長が開発した名物杏仁豆腐は柔らかもちもち食感で長年リピーターを獲得。接待・記念日・家族会食など多様なシーンに最適な落ち着いた高級空間をご用意しています。</p>
+    </div>
+
+    <div class="box-info box">
+        <h3 class="section-title">店舗基本情報</h3>
+        <p><strong>住所</strong>：東京都新宿区早稲田鶴巻町521 大坂ビル1F</p>
+        <p><strong>アクセス</strong>：早稲田駅1番出口徒歩5分 / 江戸川橋駅1b出口徒歩8分</p>
+        <p><strong>電話</strong>：03-6457-3598（事前予約受付）</p>
+        <p><strong>営業時間</strong>：月～土 昼11:00～14:30(L.O14:30)｜夜17:00～22:00(L.O22:00)</p>
+        <p><strong>定休日</strong>：毎週日曜日</p>
+        <p><strong>予算</strong>：ランチ～999円 / ディナー2000～2999円</p>
+    </div>
+
+    <div class="box-service box">
+        <h3 class="section-title">設備・お支払いサービス</h3>
+        <p><strong>総席数</strong>：全30席（テーブル20席、カウンター10席）</p>
+        <p><strong>貸切</strong>：各種宴会・祝い事貸切可能（事前予約必須）</p>
+        <p><strong>決済</strong>：JCB/AMEX/Diners、電子マネー・QR決済対応（クレジットは5000円以上利用）</p>
+        <p><strong>サービス</strong>：全メニューテイクアウト可能、近隣有料駐車場案内</p>
+        <p><strong>SNS</strong>：Facebook公式ページに限定メニュー・イベント情報掲載</p>
+    </div>
+
+    <div class="box-menu box">
+        <h3 class="section-title">看板おすすめメニュー</h3>
+        <div class="menu-flex">
+            <div class="menu-card">
+                <h4>香港手作り点心</h4>
+                <p>小籠包・海老焼売・野菜餃子</p>
+            </div>
+            <div class="menu-card">
+                <h4>季節創作中華</h4>
+                <p>旬素材使用、シェフ限定一品料理</p>
+            </div>
+            <div class="menu-card">
+                <h4>特製杏仁豆腐</h4>
+                <p>店長自家製、店舗一番人気デザート</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-note box">
+        <h3 class="section-title">ご来店のお願い</h3>
+        <p>点心はすべて当日手作りのため、ランチ・ディナーピーク時は提供に時間を頂戴する場合がございます。</p>
+        <p>大切な記念日や接待利用の際は、電話にて事前予約を推奨しております。</p>
+        <p>スタッフ一同、上質な料理とおもてなしでお待ちしております。</p>
+    </div>
+</div>
+
+<footer>
+    <p>創作中華香港手作り点心 チャイ</p>
+    <p>©2026 All Rights Reserved</p>
+</footer>
+
+<script th:src="@{/js/jquery-4.0.0.js}"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+<script th:src="@{/js/jquery.twbsPagination.js}"></script>
+<script th:src="@{/js/modaal.js}"></script>
+<script th:src="@{/js/hatchu.js}"></script>
+</body>
+</html>
